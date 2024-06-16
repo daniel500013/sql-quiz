@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21SYJDF5NT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-21SYJDF5NT');
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="counters" class="row mb-3">
+            <div class="col-4 text-center">
+                <div id="correct-answers" class="text-success">Poprawne: 0</div>
+            </div>
+            <div class="col-4 text-center">
+                <div id="question-counter">Pytanie 0/0</div>
+            </div>
+            <div class="col-4 text-center">
+                <div id="incorrect-answers" class="text-danger">Błędne: 0</div>
+            </div>
+        </div>
+        <div id="quiz-container" style="margin-top: -18vh;" class="text-center d-flex flex-column justify-content-center align-items-center vh-100">
+            <h2>Kliknij start aby rozpocząć test [SQL]</h2>
+            <button id="start-btn" class="btn btn-success">Start</button>
+        </div>
+        <div id="results-container" class="text-center d-none">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Pytanie</th>
+                            <th>Twoja odpowiedź</th>
+                            <th>Poprawna odpowiedź</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-success mt-2" onclick="restartQuiz()">Restart</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

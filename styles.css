@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#quiz-container {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answers {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.answer {
+    display: block;
+    margin: 5px 0;
+}
+
+.form-check-input {
+    margin-top: -1px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.form-check-label {
+    font-size: 1.25rem;
+}
+
+.table-responsive {
+    max-height: 60vh; /* Adjust this value to fit your design */
+    overflow-y: auto;
+}
