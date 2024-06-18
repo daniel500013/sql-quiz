@@ -293,9 +293,9 @@ let questions = [
     {
         "question": "Za pomocą operatora UNION można:",
         "answers": [
-            {"text": "utworzyć sumę dwóch tabel", "correct": false},
+            {"text": "utworzyć sumę dwóch tabel", "correct": true},
             {"text": "utworzyć złączenie wewnętrzne dwóch tabel", "correct": false},
-            {"text": "utworzyć różnice dwóch tabel", "correct": true},
+            {"text": "utworzyć różnice dwóch tabel", "correct": false},
             {"text": "utworzyć złączenie zewnętrzne dwóch tabel", "correct": false}
         ]
     },
