@@ -358,8 +358,8 @@ let questions = [
         "answers": [
             {"text": "wartość klucza obcego może być null wartością odpowiadającą do klucza głównego", "correct": false},
             {"text": "wartości w kolumnie niekluczowej nie mogą zależeć przechodnio od klucza", "correct": false},
-            {"text": "w każdej tabeli powinien istnieć dokładnie jeden klucz obcy", "correct": true},
-            {"text": "każda nietrywialna zależność funkcyjna jest zależnością od klucza", "correct": false}
+            {"text": "w każdej tabeli powinien istnieć dokładnie jeden klucz obcy", "correct": false},
+            {"text": "każda nietrywialna zależność funkcyjna jest zależnością od klucza", "correct": true}
         ]
     },
     {
