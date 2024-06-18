@@ -183,9 +183,9 @@ const questionsBackup = [
         "question": "W przypadku wyrażenia 1000 >= ALL(podzapytanie):",
         "answers": [
             {"text": "podzapytanie zwraca jeden wiersz", "correct": false},
-            {"text": "podzapytanie zwraca relację z jedną kolumną", "correct": true},
+            {"text": "podzapytanie zwraca relację z jedną kolumną", "correct": false},
             {"text": "podzapytanie zwraca dowolną relację", "correct": false},
-            {"text": "podzapytanie zwraca dokładnie jedną kolumnę", "correct": false}
+            {"text": "podzapytanie zwraca dokładnie jedną kolumnę", "correct": true}
         ]
     },
     {
@@ -456,9 +456,9 @@ let questions = [
         "question": "W przypadku wyrażenia 1000 >= ALL(podzapytanie):",
         "answers": [
             {"text": "podzapytanie zwraca jeden wiersz", "correct": false},
-            {"text": "podzapytanie zwraca relację z jedną kolumną", "correct": true},
+            {"text": "podzapytanie zwraca relację z jedną kolumną", "correct": false},
             {"text": "podzapytanie zwraca dowolną relację", "correct": false},
-            {"text": "podzapytanie zwraca dokładnie jedną kolumnę", "correct": false}
+            {"text": "podzapytanie zwraca dokładnie jedną kolumnę", "correct": true}
         ]
     },
     {
