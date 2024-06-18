@@ -20,9 +20,9 @@ const questionsBackup = [
     {
         "question": "Za pomocą operatora UNION można:",
         "answers": [
-            {"text": "utworzyć sumę dwóch tabel", "correct": false},
+            {"text": "utworzyć sumę dwóch tabel", "correct": true},
             {"text": "utworzyć złączenie wewnętrzne dwóch tabel", "correct": false},
-            {"text": "utworzyć różnice dwóch tabel", "correct": true},
+            {"text": "utworzyć różnice dwóch tabel", "correct": false},
             {"text": "utworzyć złączenie zewnętrzne dwóch tabel", "correct": false}
         ]
     },
@@ -85,8 +85,8 @@ const questionsBackup = [
         "answers": [
             {"text": "wartość klucza obcego może być null wartością odpowiadającą do klucza głównego", "correct": false},
             {"text": "wartości w kolumnie niekluczowej nie mogą zależeć przechodnio od klucza", "correct": false},
-            {"text": "w każdej tabeli powinien istnieć dokładnie jeden klucz obcy", "correct": true},
-            {"text": "każda nietrywialna zależność funkcyjna jest zależnością od klucza", "correct": false}
+            {"text": "w każdej tabeli powinien istnieć dokładnie jeden klucz obcy", "correct": false},
+            {"text": "każda nietrywialna zależność funkcyjna jest zależnością od klucza", "correct": true}
         ]
     },
     {
@@ -200,9 +200,9 @@ const questionsBackup = [
     {
         "question": "Wskaż aksjomaty wykonywania transakcji:",
         "answers": [
-            {"text": "wycofywalność", "correct": true},
-            {"text": "trwałość", "correct": false},
-            {"text": "spójność", "correct": false},
+            {"text": "wycofywalność", "correct": false},
+            {"text": "trwałość", "correct": true},
+            {"text": "spójność", "correct": true},
             {"text": "niezawodność", "correct": false}
         ]
     },
@@ -473,9 +473,9 @@ let questions = [
     {
         "question": "Wskaż aksjomaty wykonywania transakcji:",
         "answers": [
-            {"text": "wycofywalność", "correct": true},
-            {"text": "trwałość", "correct": false},
-            {"text": "spójność", "correct": false},
+            {"text": "wycofywalność", "correct": false},
+            {"text": "trwałość", "correct": true},
+            {"text": "spójność", "correct": true},
             {"text": "niezawodność", "correct": false}
         ]
     },
