@@ -138,9 +138,9 @@ const questionsBackup = [
         "question": "Dany jest schemat relacyjny R=(Wykładowca, Przedmiot, Ocena) i zachodzą następujące zależności funkcyjne: F = {Ocena → Przedmiot; Ocena → Wykładowca; Wykładowca → Przedmiot} Schemat R:",
         "answers": [
             {"text": "jest w postaci normalnej Boyce’a-Codda", "correct": false},
-            {"text": "jest w 3NF ale nie jest w postaci normalnej Boyce’a-Codda", "correct": true},
+            {"text": "jest w 3NF ale nie jest w postaci normalnej Boyce’a-Codda", "correct": false},
             {"text": "jest w 2NF", "correct": false},
-            {"text": "nie jest w 3NF ani w postaci normalnej Boyce’a-Codda", "correct": false}
+            {"text": "nie jest w 3NF ani w postaci normalnej Boyce’a-Codda", "correct": true}
         ]
     },
     {
@@ -411,9 +411,9 @@ let questions = [
         "question": "Dany jest schemat relacyjny R=(Wykładowca, Przedmiot, Ocena) i zachodzą następujące zależności funkcyjne: F = {Ocena → Przedmiot; Ocena → Wykładowca; Wykładowca → Przedmiot} Schemat R:",
         "answers": [
             {"text": "jest w postaci normalnej Boyce’a-Codda", "correct": false},
-            {"text": "jest w 3NF ale nie jest w postaci normalnej Boyce’a-Codda", "correct": true},
+            {"text": "jest w 3NF ale nie jest w postaci normalnej Boyce’a-Codda", "correct": false},
             {"text": "jest w 2NF", "correct": false},
-            {"text": "nie jest w 3NF ani w postaci normalnej Boyce’a-Codda", "correct": false}
+            {"text": "nie jest w 3NF ani w postaci normalnej Boyce’a-Codda", "correct": true}
         ]
     },
     {
