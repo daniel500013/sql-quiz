@@ -588,7 +588,7 @@ function showQuestion() {
         </div>
         <br/>
         <div>
-            <button class="btn btn-primary d-block" onclick="showResults()">Przejdź do podsumowania</button>
+            <button class="btn btn-primary d-block" onclick="handleUnansweredQuestions()">Przejdź do podsumowania</button>
         </div>
     `;
 
@@ -625,6 +625,21 @@ function checkAnswer() {
 
     currentQuestionIndex++;
     showQuestion();
+}
+
+function handleUnansweredQuestions() {
+    questions.slice(currentQuestionIndex).forEach((question, index) => {
+        let userAnswerTexts = ["Brak odpowiedzi"];
+        userAnswers.push(userAnswerTexts);
+        incorrectAnswers++;
+        incorrectQuestions.push(question);
+    });
+
+    document.getElementById('correct-answers').innerText = `Poprawne: ${correctAnswers}`;
+    document.getElementById('incorrect-answers').innerText = `Błędne: ${incorrectAnswers}`;
+
+    currentQuestionIndex = questions.length;
+    showResults();
 }
 
 function showResults() {
