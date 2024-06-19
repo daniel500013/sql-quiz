@@ -545,6 +545,7 @@ let questions = [
 ];
 
 let incorrectQuestions = [];
+let repeatMode = false;
 
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 
@@ -567,7 +568,7 @@ function showQuestion() {
         showResults();
         return;
     }
-    
+
     const question = questions[currentQuestionIndex];
     shuffleArray(question.answers);
 
@@ -597,11 +598,11 @@ function showQuestion() {
 function checkAnswer() {
     const answers = document.querySelectorAll('.answer input');
     let isCorrect = true;
-    let userAnswerText = '';
+    let userAnswerTexts = [];
 
     answers.forEach(answer => {
         if (answer.checked) {
-            userAnswerText = answer.parentNode.textContent.trim();
+            userAnswerTexts.push(answer.parentNode.textContent.trim());
             if (answer.value === 'false') {
                 isCorrect = false;
             }
@@ -610,18 +611,17 @@ function checkAnswer() {
         }
     });
 
-    userAnswers.push(userAnswerText);
+    userAnswers.push(userAnswerTexts);
 
     if (isCorrect) {
         correctAnswers++;
     } else {
         incorrectAnswers++;
-
         incorrectQuestions.push(questions[currentQuestionIndex]);
     }
 
     document.getElementById('correct-answers').innerText = `Poprawne: ${correctAnswers}`;
-    document.getElementById('incorrect-answers').innerText = `Błedne: ${incorrectAnswers}`;
+    document.getElementById('incorrect-answers').innerText = `Błędne: ${incorrectAnswers}`;
 
     currentQuestionIndex++;
     showQuestion();
@@ -637,9 +637,15 @@ function showResults() {
         <tr>
             <td>${question.question}</td>
             <td style="color: ${isAnswerCorrect(question, userAnswers[index]) ? 'green' : 'red'}">
-                ${userAnswers[index]}
+                <ol>
+                    ${userAnswers[index] ? userAnswers[index].map(answer => `<li>${answer}</li>`).join('') : ''}
+                </ol>
             </td>
-            <td>${getCorrectAnswer(question)}</td>
+            <td>
+                <ol>
+                    ${getCorrectAnswer(question)}
+                </ol>
+            </td>
         </tr>
     `).join('');
 }
@@ -652,6 +658,7 @@ function repeatIncorrectQuestions() {
 
     questions = incorrectQuestions;
     incorrectQuestions = [];
+    repeatMode = true;
     currentQuestionIndex = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
@@ -665,17 +672,21 @@ function repeatIncorrectQuestions() {
     showQuestion();
 }
 
-function isAnswerCorrect(question, userAnswer) {
-    const correctAnswer = getCorrectAnswer(question);
-    return userAnswer === correctAnswer;
+function isAnswerCorrect(question, userAnswers) {
+    if (!userAnswers) return false;
+    const correctAnswers = getCorrectAnswer(question).replace(/<li>|<\/li>/g, '').split('| ');
+    return userAnswers.every(answer => correctAnswers.includes(answer));
 }
 
 function getUserAnswer(question, index) {
-    return userAnswers[index];
+    return userAnswers[index] ? userAnswers[index].join('<br>') : '';
 }
 
 function getCorrectAnswer(question) {
-    return question.answers.find(answer => answer.correct).text;
+    return question.answers
+        .filter(answer => answer.correct)
+        .map(answer => `<li>${answer.text}</li>`)
+        .join('| ');
 }
 
 function restartQuiz() {
